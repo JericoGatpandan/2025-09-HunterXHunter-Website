@@ -1,21 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: white;
+      }
 
-<body>
-    <h1>HxH Nen type Users</h1>
-    <nav>
+      .main-container {
+        height: 100vh;
+        width: 100vw;
+        /* Gradient overlay + background image */
+        /* background: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 0.7) 40%,
+            rgba(0, 0, 0, 0) 80%
+          ),
+          url(images/Homepage-background.jpg) no-repeat center center/cover; */
+        display: flex;
+        flex-direction: column;
+      }
+
+      .nav-container {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        margin-bottom: 40px;
+        margin: 20px auto;
+      }
+
+      h1 {
+        margin: 20px auto;
+
+        font-size: 2.5rem;
+      }
+      .nav-container li a {
+        text-decoration: none;
+        /* color: white; */
+        font-size: 1.5rem;
+        transition: color 0.3s ease;
+        font-weight: 700;
+      }
+      .nav-container li a:hover {
+        color: red;
+      }
+
+      .overview {
+        max-width: 700px;
+        text-align: center;
+        font-size: 2rem;
+        margin: auto 100px;
+        gap: 30px;
+        line-height: 1.6;
+        color: white;
+        padding: 50px;
+        border-radius: 5%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .explore-btn {
+        margin-top: 25px;
+        padding: 12px 24px;
+        background-color: darkgreen;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 20px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 800;
+      }
+      .explore-btn:hover {
+        background-color: limegreen;
+      }
+
+      /* Specialist Diagram */
+      .content-container {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url(images/2.png);
+      }
+      .specialist-diagram {
+        width: 800px;
+        height: 800px;
+      }
+
+      /* video */
+      #background-video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: -1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <video autoplay muted loop id="background-video">
+        <source
+          src="videos/gons-hunter-spirit.1920x1080.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <h1>HxH Nen type Users</h1>
+      <ul class="nav-container">
         <li><a href="index.html">Home</a></li>
         <li><a href="enhancer.html">Enhancers</a></li>
         <li><a href="emitter.html">Emitters</a></li>
         <li><a href="manipulator.html">Manipulators</a></li>
         <li><a href="specialist.html">Specialist</a></li>
-    </nav>
-</body>
+      </ul>
 
+      <!-- Quick Nen Overview -->
+      <div class="overview">
+        <p>
+          Nen is the ability to use and control your life energy, also known as
+          aura. Every user develops unique powers depending on their Nen type.
+          These abilities shape how Hunters fight, defend, and strategize.
+        </p>
+        <a href="#" class="explore-btn">Explore Nen Types</a>
+      </div>
+    </div>
+    <div class="content-container">
+      <img
+        src="images/Specialist_Diagram.svg"
+        alt="specialist-diagram"
+        class="specialist-diagram"
+      />
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        Created by Jerico Gatpandan |
+        <a href="https://github.com/JericoGatpandan" target="_blank">GitHub</a>
+      </p>
+    </footer>
+  </body>
 </html>

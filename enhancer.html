@@ -1,21 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enhancers</title>
-</head>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        color: black;
+        font-family: Arial, sans-serif;
+      }
 
-<body>
-    <h1>Enhancers</h1>
-    <nav>
+      body {
+        background-color: #f9f9f9;
+      }
+
+      .main-container {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Navigation */
+      .nav-container {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+        margin: 20px auto;
+      }
+
+      .nav-container li a {
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: color 0.3s ease;
+        font-weight: bold;
+      }
+
+      .nav-container li a:hover {
+        color: crimson;
+      }
+
+      /* Heading */
+      h1 {
+        margin: 20px auto;
+        font-size: 2.8rem;
+        color: #222;
+      }
+
+      /* Content */
+      .content-container {
+        display: flex;
+        width: 90%;
+        max-width: 1200px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        margin-top: 20px;
+      }
+
+      .left {
+        flex: 1;
+      }
+
+      .left h2 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+        color: #444;
+      }
+
+      .left p {
+        line-height: 1.6;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: crimson;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: darkred;
+      }
+
+      .right img {
+        max-height: 500px;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <h1>Enhancers</h1>
+      <ul class="nav-container">
         <li><a href="index.html">Home</a></li>
         <li><a href="enhancer.html">Enhancers</a></li>
         <li><a href="emitter.html">Emitters</a></li>
         <li><a href="manipulator.html">Manipulators</a></li>
-        <li><a href="specialist.html">Specialist</a></li>
-    </nav>
-</body>
+        <li><a href="specialist.html">Specialists</a></li>
+      </ul>
 
+      <div class="content-container">
+        <div class="left">
+          <h2>What is an Enhancer?</h2>
+          <p>
+            Enhancers are known for their natural strength and determination.
+            They focus their Nen to boost their physical abilities, making them
+            powerful in close combat. Gon Freecss is a prime example of an
+            Enhancer - strong-willed, straightforward, and always pushing forward.
+          </p>
+          <a href="emitter.html" class="btn">Next: Emitters →</a>
+        </div>
+
+        <div class="right">
+          <img src="images/Gon.jpeg" alt="Gon Freecss - Enhancer" />
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>
+        Created by Jerico Gatpandan |
+        <a href="https://github.com/JericoGatpandan" target="_blank">GitHub</a>
+      </p>
+    </footer>
+  </body>
 </html>
