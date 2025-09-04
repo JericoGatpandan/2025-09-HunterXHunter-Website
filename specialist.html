@@ -1,140 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Specialist</title>
-    <style>
-      * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        color: black;
-        font-family: Arial, sans-serif;
-      }
 
-      body {
-        background-color: #f9f9f9;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Specialist</title>
+  <style>
+    .iframe {
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 20px;
+    }
+  </style>
+</head>
 
-      .main-container {
-        width: 100vw;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+<body
+  style="background-color:#f9f9f9;padding:0;margin:0;box-sizing:border-box;color:rgb(255, 255, 255);font-family:Arial,sans-serif;">
+  <div class="main-container"
+    style="width:100vw;min-height:100vh;display:flex;flex-direction:column;align-items:center;">
+    <video autoplay muted loop id="background-video"
+      style="width:100vw;height:100vh;object-fit:cover;position:fixed;left:0;right:0;top:0;bottom:0;z-index:-1;">
+      <source src="Kurapika_video.mp4" type="video/mp4" alt="Kurapika_video" />
+    </video>
+    <h1 style="margin:20px auto;font-size:2.8rem;color:#ffffff;">Specialist</h1>
+    <ul class="nav-container" style="display:flex;gap:30px;list-style:none;margin:20px auto;">
+      <li><a href="index.html"
+          style="text-decoration:none;font-size:1.2rem;font-weight:bold;position:relative;padding:10px;color:rgb(255, 255, 255);"
+          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Home</a></li>
+      <li><a href="enhancer.html"
+          style="text-decoration:none;font-size:1.2rem;font-weight:bold;position:relative;padding:10px;color:rgb(255, 255, 255);"
+          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Enhancers</a></li>
+      <li><a href="emitter.html"
+          style="text-decoration:none;font-size:1.2rem;font-weight:bold;position:relative;padding:10px;color:rgb(255, 255, 255);"
+          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Emitters</a></li>
+      <li><a href="manipulator.html"
+          style="text-decoration:none;font-size:1.2rem;font-weight:bold;position:relative;padding:10px;color:rgb(255, 255, 255);"
+          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Manipulators</a></li>
+      <li><a href="specialist.html"
+          style="text-decoration:none;font-size:1.2rem;font-weight:bold;position:relative;padding:10px;color:rgb(255, 255, 255);"
+          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Specialists</a></li>
+    </ul>
 
-      /* Navigation */
-      .nav-container {
-        display: flex;
-        gap: 30px;
-        list-style: none;
-        margin: 20px auto;
-      }
+    <div class="content-container"
+      style="display:flex;width:90%;max-width:1200px;align-items:center;justify-content:space-between;gap:50px;margin-top:20px;">
+      <div class="left" style="flex:1;  background-color: #b1b1b123; padding: 50px; border-radius: 10px;">
+        <h2 style="font-size:2rem;margin-bottom:15px;color:#ffffff;">What is an Specialist?</h2>
+        <p style="line-height:1.6;font-size:1.1rem;margin-bottom:20px;">
+          Specialist Nen user possesses a unique Hatsu ability that cannot be classified into the five standard Nen
+          categories (Enhancement, Transmutation, Manipulation, Conjuration, or Emission).
+        </p>
+        <a href="index.html" class="btn"
+          style="display:inline-block;padding:10px 20px;background-color:crimson;color:white;text-decoration:none;border-radius:8px;font-weight:bold;"
+          onMouseOver="this.style.background='darkred'" onMouseOut="this.style.background='crimson'">← Back</a>
+      </div>
 
-      .nav-container li a {
-        text-decoration: none;
-        font-size: 1.2rem;
-        transition: color 0.3s ease;
-        font-weight: bold;
-      }
-
-      .nav-container li a:hover {
-        color: crimson;
-      }
-
-      /* Heading */
-      h1 {
-        margin: 20px auto;
-        font-size: 2.8rem;
-        color: #222;
-      }
-
-      /* Content */
-      .content-container {
-        display: flex;
-        width: 90%;
-        max-width: 1200px;
-        align-items: center;
-        justify-content: space-between;
-        gap: 50px;
-        margin-top: 20px;
-      }
-
-      .left {
-        flex: 1;
-      }
-
-      .left h2 {
-        font-size: 2rem;
-        margin-bottom: 15px;
-        color: #444;
-      }
-
-      .left p {
-        line-height: 1.6;
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: crimson;
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: background 0.3s ease;
-      }
-
-      .btn:hover {
-        background-color: darkred;
-      }
-
-      .right img {
-        max-height: 500px;
-        border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      }
-    </style>
-  </head>
-
-  <body>
-    <div class="main-container">
-      <h1>Specialist</h1>
-      <ul class="nav-container">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="enhancer.html">Enhancers</a></li>
-        <li><a href="emitter.html">Emitters</a></li>
-        <li><a href="manipulator.html">Manipulators</a></li>
-        <li><a href="specialist.html">Specialists</a></li>
-      </ul>
-
-      <div class="content-container">
-        <div class="left">
-          <h2>What is an Specialist?</h2>
-          <p>
-            Enhancers are known for their natural strength and determination.
-            They focus their Nen to boost their physical abilities, making them
-            powerful in close combat. Gon Freecss is a prime example of an
-            Enhancer - strong-willed, straightforward, and always pushing forward.
-          </p>
-          <a href="index.html" class="btn">← Back</a>
-        </div>
-
-        <div class="right">
-          <img src="images/Kurapika.jpeg" alt="Gon Freecss - Enhancer" />
-        </div>
+      <div class="right">
+        <img src="Kurapika.jpeg" alt="Kurapika"
+          style="max-height:500px;border-radius:15px;box-shadow:0 4px 10px rgba(0,0,0,0.2);" />
       </div>
     </div>
-    <!-- Footer -->
-    <footer class="footer">
-      <p>
-        Created by Jerico Gatpandan |
-        <a href="https://github.com/JericoGatpandan" target="_blank">GitHub</a>
-      </p>
-    </footer>
-  </body>
+  </div>
+  <div class="iframe-container" style="display: flex; justify-content: center;">
+    <iframe width="1296" height="729" src="https://www.youtube.com/embed/20pbpu7rO0g"
+      title="Kurapika&#39;s Nen Abilities EXPLAINED! | Nencyclopedia | Hunter X Hunter" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="iframe"></iframe>
+  </div>
+  <!-- Footer -->
+  <footer style="width: 100vw;">
+    <p style="color:rgb(255, 255, 255); text-align: center;">
+      Created by Jerico Gatpandan |
+      <a href="https://github.com/JericoGatpandan" target="_blank"
+        style="text-decoration:none;color:rgb(255, 255, 255);">GitHub</a>
+    </p>
+  </footer>
+</body>
+
 </html>
