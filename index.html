@@ -6,73 +6,166 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HunterXHunter</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    #background-video {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    .main-container {
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      margin: 20px auto;
+      font-size: 2.5rem;
+      color: white;
+    }
+
+    .nav-container {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      margin-bottom: 40px;
+      margin: 20px auto;
+    }
+
+    .nav-container>li>a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: 700;
+      position: relative;
+      padding: 10px;
+      color: white;
+    }
+
+    .overview {
+      max-width: 700px;
+      text-align: center;
+      font-size: 2rem;
+      margin: 50px 50px;
+      gap: 30px;
+      line-height: 1.6;
+      color: white;
+      padding: 50px;
+      border-radius: 5%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .explore-btn {
+      margin-top: 25px;
+      padding: 12px 24px;
+      background-color: crimson;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .content-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    .link-bilibili>a {
+      text-decoration: none;
+      color: white;
+      font-size: 2rem;
+      background-color: crimson;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+
     .iframe {
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       border-radius: 20px;
     }
+
+    footer>p {
+      color: rgb(255, 255, 255);
+      text-align: center;
+    }
   </style>
 </head>
 
-<body style="padding:0;margin:0;box-sizing:border-box;color:white;">
-  <div class="main-container" style="height:100vh;width:100vw;display:flex;flex-direction:column;">
-    <video autoplay muted loop id="background-video"
-      style="width:100vw;height:100vh;object-fit:cover;position:fixed;left:0;right:0;top:0;bottom:0;z-index:-1;">
+<body>
+  <div class="main-container">
+    <video autoplay muted loop id="background-video">
       <source src="Gons-Homepage.mp4" type="video/mp4" />
     </video>
-    <h1 style="margin:20px auto;font-size:2.5rem;color:white;">HxH Nen type Users</h1>
-    <ul class="nav-container" style="display:flex;gap:40px;list-style:none;margin-bottom:40px;margin:20px auto;">
-      <li><a href="index.html"
-          style="text-decoration:none;font-size:1.5rem;font-weight:700;position:relative;padding:10px;color:white;"
-          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Home</a></li>
-      <li><a href="enhancer.html"
-          style="text-decoration:none;font-size:1.5rem;font-weight:700;position:relative;padding:10px;color:white;"
-          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Enhancers</a></li>
-      <li><a href="emitter.html"
-          style="text-decoration:none;font-size:1.5rem;font-weight:700;position:relative;padding:10px;color:white;"
-          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Emitters</a></li>
-      <li><a href="manipulator.html"
-          style="text-decoration:none;font-size:1.5rem;font-weight:700;position:relative;padding:10px;color:white;"
-          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Manipulators</a></li>
-      <li><a href="specialist.html"
-          style="text-decoration:none;font-size:1.5rem;font-weight:700;position:relative;padding:10px;color:white;"
-          onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Specialist</a></li>
+    <h1>HxH Nen type Users</h1>
+    <ul class="nav-container">
+      <li><a href="index.html" onMouseOver="this.style.color='crimson'" onMouseOut="this.style.color='white'">Home</a>
+      </li>
+      <li><a href="enhancer.html" onMouseOver="this.style.color='crimson'"
+          onMouseOut="this.style.color='white'">Enhancers</a></li>
+      <li><a href="emitter.html" onMouseOver="this.style.color='crimson'"
+          onMouseOut="this.style.color='white'">Emitters</a></li>
+      <li><a href="manipulator.html" onMouseOver="this.style.color='crimson'"
+          onMouseOut="this.style.color='white'">Manipulators</a></li>
+      <li><a href="specialist.html" onMouseOver="this.style.color='crimson'"
+          onMouseOut="this.style.color='white'">Specialist</a></li>
     </ul>
 
     <!-- Quick Nen Overview -->
-    <div class="overview"
-      style="max-width:700px;text-align:center;font-size:2rem;margin:50px 50px;gap:30px;line-height:1.6;color:white;padding:50px;border-radius:5%;display:flex;align-items:center;flex-direction:column;">
+    <div class="overview">
 
       <p style="color:white;">
         Nen is the ability to use and control your life energy, also known as
         aura. Every user develops unique powers depending on their Nen type.
         These abilities shape how Hunters fight, defend, and strategize.
       </p>
-      <a href="enhancer.html" class="explore-btn"
-        style="margin-top:25px;padding:12px 24px;background-color:crimson;border:none;border-radius:6px;color:white;font-size:20px;cursor:pointer;text-decoration:none;font-weight:800;"
-        onMouseOver="this.style.background='darkred'" onMouseOut="this.style.background='crimson'">Explore Nen Types</a>
+      <a href="enhancer.html" class="explore-btn" onMouseOver="this.style.background='darkred'"
+        onMouseOut="this.style.background='crimson'">Explore Nen Types</a>
     </div>
   </div>
-  <div class="content-container"
-    style="width:100vw;height:100vh;display:flex;justify-content:center;align-items:center;flex-direction: column; gap: 50px;">
+  <div class="content-container">
     <iframe width="1296" height="729" src="https://www.youtube.com/embed/d6kBeJjTGnY"
       title="Hunter X Hunter Set 1- Official Extended Trailer" frameborder="0"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       referrerpolicy="strict-origin-when-cross-origin" class="iframe"></iframe>
     <div class="link-bilibili">
-      <a href="https://www.bilibili.tv/play/37603" target="_blank"
-        style="text-decoration: none;color: white; font-size: 2rem; background-color: crimson; padding: 20px; border-radius: 10px; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;"
-        onMouseOver="this.style.background='darkred'" onMouseOut="this.style.background='crimson'">Watch Full Anime:
+      <a href="https://www.bilibili.tv/play/37603" target="_blank" onMouseOver="this.style.background='darkred'"
+        onMouseOut="this.style.background='crimson'">Watch Full Anime:
         →</a>
     </div>
   </div>
+
   <!-- Footer -->
-  <footer style="width: 100vw;">
-    <p style="color:rgb(255, 255, 255); text-align: center;">
-      Created by Jerico Gatpandan |
-      <a href="https://github.com/JericoGatpandan" target="_blank"
-        style="text-decoration:none;color:rgb(255, 255, 255);">GitHub</a>
-    </p>
-  </footer>
+
 </body>
 
 </html>
